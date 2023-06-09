@@ -4,11 +4,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ginger Bold', sans-serif;
 }
 
 :root {
-    --mainColor: #0077ff;
+    --mainColor: #000811;
     --MainColorLight: #000000;
     --secondaryColor: #0011ff;
     --textColor: #eee;
@@ -18,13 +18,17 @@ html {
     background-color: #242424;
 }
 
+body {
+    background-image: linear-gradient(to right, #141e30, #243b55);
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
     padding: 0 2rem;
-    background-color: var(--mainColor) ;
+    background-color: transparent ;
     color: var(--textColor);
     width: 99vw;
 }
@@ -54,7 +58,7 @@ header .nav-btn {
 @media only screen and (max-width: 1024px) {
     header .nav-btn {
         visibility: visible;
-        opacity: 1;   
+        opacity: 1;
     }
 
     header nav {
@@ -88,6 +92,22 @@ header .nav-btn {
         font-size: 1.5rem;
     }
 
+
+    #introduction h1 { 
+        font-size: 18vw !important;
+    }
+
+    
+#introduction p {
+    margin: 1rem;
+    font-size: 4vw !important;
+}
+
+#introduction h2 {
+    font-size: 8vw !important;
+}
+
+
     #description {
         width: 100vw;
         margin: 0;
@@ -109,28 +129,48 @@ header .nav-btn {
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
-    height: 95vh;
-
+    align-items: center;    
+    background-color: #1e1e1e;
 }
 
-
+#BackgroundHero {
+    width: 100vw;
+    height: 90vh;
+    margin-top: 5% ;
+}
 #introduction h1 { 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 64px;
+    
+    font-size: 6rem;
+    color: #cda325;
 }
 #introduction h2 {
-    font-size:28px;
+    font-size: 2.5rem;
 }
 
 #introduction p {
-    font-size: 21px;
+    font-size: 2rem;
 }
 
+#introduction {
+    width: 65%;
+    margin: 0;
+    top: 50%;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
 #About {
     display: flex;
     text-align: center;
     justify-content: center;
+    position: relative;
+    margin-top: 100vh;
+
+}
+
+#Rocket {
+    position: relative;
 }
 
 #description {
@@ -140,7 +180,9 @@ header .nav-btn {
 #description {
     width: 50%;
 }
-
+#layer1 {
+    z-index: -1 !important;
+}
 #description p {
     margin: 50px;
 }
@@ -149,7 +191,7 @@ header .nav-btn {
     opacity: 0;
     transition: all 1.5s;
     filter: blur(4px);
-    transform: translateX(-100%);
+    transform: translateX(-50%);
 }
 
 @media(prefers-reduced-motion) {
@@ -162,4 +204,20 @@ header .nav-btn {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+#Ballon{
+    position: inherit;
+    top: 10%;
+    right: 0%;
+}
+
+#Ballon img {
+    position: relative;
+    width: 200%;
+}
+
+
+#Layer2 {
+    position: relative;
 }

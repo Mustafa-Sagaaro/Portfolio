@@ -22,17 +22,18 @@ const Hero = () => {
     };
   }, []);
 
+
   return (
-    <section id="Hero" className="hidden">
-      <div id="introduction">
-        <h2>welcome</h2>
-        <h1>I'm Mustafa Sagaaro</h1>
+    <section id="Hero">
+      <div id="tsparticles"></div>
+      <div id="introduction" className="hidden">
+        <h2>welcome, I'm</h2>
+        <h1>Mustafa Sagaaro</h1>
         <p>based in Zurich, Switzerland.</p>
       </div>
     </section>
+
   );
 };
 
 export default Hero;
-
-
