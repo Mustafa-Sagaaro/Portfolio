@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="About" class="hidden">
-      <div id="description">
+    <section id="About" >
+      <div id="description"class="hidden">
         <h2>Immerse yourself in the fascinating world of technology with me!</h2>
         <p>
         At just

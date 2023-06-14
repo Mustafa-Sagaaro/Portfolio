@@ -7,20 +7,19 @@ import Hero from "./components/Hero.jsx";
 import Works from "./components/Works.jsx";
 import Tech from "./components/Tech.jsx";
 import Background from "./components/Background.jsx";
-import Rocket from "./components/Rocket.jsx"
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Rocket from "./components/Rocket.jsx";
+import Slider from "./components/Slider.jsx";
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Hero />
-      <Rocket />
-      <div id="layer2">
-        <About />
-      </div>
+      <Slider />
+      <About />
     </div>
   );
 };
+
 
 export default App;

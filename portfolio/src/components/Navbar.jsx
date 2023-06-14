@@ -15,7 +15,7 @@ const Navbar = () => {
     
     return (
         <header>
-            <h3>Logo</h3>
+            <h3 id='logo'>Logo</h3>
             <nav ref={navRef}>
                 <a href="/#">About</a>
                 <a href="/#">my Work</a>
