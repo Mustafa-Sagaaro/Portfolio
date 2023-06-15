@@ -9,6 +9,7 @@ import Tech from "./components/Tech.jsx";
 import Background from "./components/Background.jsx";
 import Rocket from "./components/Rocket.jsx";
 import Slider from "./components/Slider.jsx";
+import './utils/motion.js'
 
 const App = () => {
   return (
@@ -20,6 +21,5 @@ const App = () => {
     </div>
   );
 };
-
 
 export default App;

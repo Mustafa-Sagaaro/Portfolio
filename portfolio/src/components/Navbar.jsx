@@ -17,7 +17,7 @@ const Navbar = () => {
         <header>
             <h3 id='logo'>Logo</h3>
             <nav ref={navRef}>
-                <a href="/#">About</a>
+                <a href="#About">About</a>
                 <a href="/#">my Work</a>
                 <a href="/#">Contact</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>

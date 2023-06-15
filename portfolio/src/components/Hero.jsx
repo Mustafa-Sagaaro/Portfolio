@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
 import "../styles/main.css";
+import "../utils/motion.js";
+import { useEffect } from "react";
+
 
 const Hero = () => {
+
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
         } else {
@@ -13,14 +16,27 @@ const Hero = () => {
         }
       });
     });
-
+  
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((el) => observer.observe(el));
-
+  
     return () => {
       hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
+  
+  useEffect(() => {
+    setTimeout(() => {
+      const sectionBefore = document.querySelector('.section');
+      if (sectionBefore) {
+        sectionBefore.classList.add('show-arrow');
+      }
+    }, 2000);
+  }, []);
+  
+  window.addEventListener("scroll", () => {
+    document.body.classList.add("scrolled");
+  });
 
   return (
     <section id="Hero">
@@ -31,9 +47,8 @@ const Hero = () => {
         <h1>Mustafa Sagaaro</h1>
         <p>based in Zurich, Switzerland.</p>
       </div>
+      <div className="section"></div>
     </section>
-
-
   );
 };
 

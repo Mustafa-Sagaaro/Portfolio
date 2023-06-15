@@ -13,7 +13,6 @@ const runAnimation = () => {
   const hero = document.querySelector('#hero-image');
   const slider = document.querySelector('.Slider');
   const logo = document.querySelector('#logo');
-  const headline = document.querySelector('#introduction');
 
   document.body.style.overflow = 'hidden';
 
@@ -32,3 +31,6 @@ const runAnimation = () => {
 };
 
 window.addEventListener('load', runAnimation);
+
+
+//scroll-animation
