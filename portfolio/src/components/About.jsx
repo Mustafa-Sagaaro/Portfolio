@@ -1,36 +1,85 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 
 const About = () => {
   return (
-<section id="About">
-  <div id="Headlinerabout" className="hidden">
-    <h1>About Me</h1>
-    <p>introduction</p>
-  </div>
-  <div id="Mainabout">
-    <div className="image-container">
-      <img src="src/assets/Sagaaro_Mustafa.png" alt="" />
-    </div>
-    <div className="info-container">
-      <div className="info-card">
-        <h2>Experience</h2>
-        <p>Apprenticeship as a Software engineer</p>
-      </div>
-      <div className="info-card">
-        <h2>Projects</h2>
-        <p>4 projects</p>
-      </div>
-      <div className="info-card">
-        <h2>Availability</h2>
-        <p>Available 24/7</p>
-        <p>I am a recently in my first year as a Software engineer currently seeking opportunities to further develop within the field. I have experience in multiple projects and strive to gain more experience to continue my professional growth.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <div id="About">
+      <div className="about-content">
+        <img
+          className="profile-image"
+          src="src/assets/Sagaaro_Mustafa.png"
+          alt="Sagaaro Mustafa"
+        />
+        <h1 id="Aboutheader">About Me</h1>
+        <div className="about-text">
+          <div className="textleft">
+            <p>
+              Welcome to my profile! My name is Sagaaro Mustafa and I'm a
+              passionate developer with a love for front-end development and
+              design. I specialize in creating engaging and interactive web
+              applications using the latest technologies.
+            </p>
+            <p>
+              With several years of experience in the industry, I have gained
+              expertise in HTML, CSS, JavaScript, and React.js. I enjoy working
+              on challenging projects and finding creative solutions to
+              problems. I strive to deliver high-quality code and exceptional
+              user experiences.
+            </p>
+          </div>
+          <div className="textright">
+            <p>
+              Apart from coding, I also have a keen interest in graphic design
+              and UI/UX. I believe that a well-designed user interface can
+              greatly enhance the overall user experience and engagement.
+            </p>
+            <p>
+              If you have an exciting project or collaboration opportunity, feel
+              free to get in touch with me. I'm always open to new challenges
+              and ready to bring innovative ideas to life.
+            </p>
+          </div>
+        </div>
 
-
+          <ul>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-facebook"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-twitter"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-instagram"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-linkedin"></span>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </div>
   );
 };
 

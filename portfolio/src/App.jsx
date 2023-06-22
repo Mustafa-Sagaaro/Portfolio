@@ -10,6 +10,7 @@ import Background from "./components/Background.jsx";
 import Rocket from "./components/Rocket.jsx";
 import Slider from "./components/Slider.jsx";
 import './utils/motion.js'
+import './utils/script.js'
 
 const App = () => {
   return (

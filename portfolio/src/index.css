@@ -13,6 +13,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 
 a {
@@ -30,6 +31,7 @@ body {
   place-items: top;
   min-width: 320px;
   min-height: 100vh;
+  max-width: 100vw;
 }
 
 h1 {
