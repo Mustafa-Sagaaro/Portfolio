@@ -2,6 +2,7 @@ import "../styles/main.css";
 import "../utils/motion.js";
 import { useEffect } from "react";
 
+
 const Hero = () => {
 
   useEffect(() => {
@@ -16,6 +17,8 @@ const Hero = () => {
   window.addEventListener("scroll", () => {
     document.body.classList.add("scrolled");
   });
+
+  
   
   return (
     <section id="Hero" className="section">

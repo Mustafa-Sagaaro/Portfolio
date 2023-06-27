@@ -7,10 +7,9 @@ import Hero from "./components/Hero.jsx";
 import Works from "./components/Works.jsx";
 import Tech from "./components/Tech.jsx";
 import Background from "./components/Background.jsx";
-import Rocket from "./components/Rocket.jsx";
+import Footer from "./components/Footer.jsx";
 import Slider from "./components/Slider.jsx";
 import './utils/motion.js'
-import './utils/script.js'
 
 const App = () => {
   return (
@@ -19,6 +18,8 @@ const App = () => {
       <Hero />
       <Slider />
       <About />
+      <Contact />
+      <Footer />
     </div>
   );
 };

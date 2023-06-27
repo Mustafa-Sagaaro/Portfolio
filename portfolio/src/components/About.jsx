@@ -1,8 +1,11 @@
 import React, { useEffect, useRef } from "react";
+import {Hologram} from "./Hologram";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "react-three-fiber";
 
 const About = () => {
   return (
-    <div id="About">
+    <section id="About">
       <div className="about-content">
         <img
           className="profile-image"
@@ -39,47 +42,58 @@ const About = () => {
             </p>
           </div>
         </div>
-
-          <ul>
-            <li>
-              <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="fa fa-facebook"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="fa fa-twitter"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="fa fa-instagram"></span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="fa fa-linkedin"></span>
-              </a>
-            </li>
-          </ul>
+        <div className="pc-model" style={{ width: "50%", justifySelf: "end"}}>
+        </div>
+        <ul>
+          <li>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fa fa-facebook"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fa fa-twitter"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fa fa-instagram"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fa fa-linkedin"></span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
+      <div className="3dmodell" style={{ position: "relative", width: "100%", height: "100vh" }}>
+        <div style={{ position: "absolute", top: 0, right: 0, width: "50%", height: "50%" }}>
+          <Canvas style={{ width: "100%", height: "100%" }}>
+            <ambientLight />
+            <pointLight position={[10, 10, 10]} />
+            <OrbitControls />
+            <Hologram scale={[2, 2, 2]} />
+          </Canvas>
+        </div>
+      </div>
+    </section>
   );
 };
 
