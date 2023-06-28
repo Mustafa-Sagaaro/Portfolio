@@ -15,10 +15,10 @@ const Navbar = () => {
     
     return (
         <header>
-            <img src="src/assets/Logo.png" style={width="200px"} alt="" />
+            <img id="logo" src="src/assets/Logo.png" style={{width:"200px"}} alt="" />
             <nav ref={navRef}>
                 <a href="#About">About</a>
-                <a href="/#">my Work</a>
+                <a href="/#Works">my Work</a>
                 <a href="#Contact">Contact</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes/>

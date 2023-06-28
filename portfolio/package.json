@@ -23,6 +23,7 @@
     "react-icons": "^4.9.0",
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.13.0",
+    "react-spinners": "^0.13.8",
     "react-three-fiber": "^6.0.13",
     "react-tilt": "^1.0.2",
     "react-use-scrollspy": "^3.1.1",
@@ -30,9 +31,6 @@
     "tsparticles": "^2.10.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
-    "@babel/preset-react": "^7.22.5",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",

@@ -1,42 +1,21 @@
 import React, { useRef } from "react";
 import "../styles/main.css";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "react-three-fiber";
 
 const Contact = () => {
-  const tiltRef = useRef(null);
-
-  const handleMouseMove = (event) => {
-    const { clientX, clientY } = event;
-    const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = tiltRef.current;
-
-    const xRotation = (clientY - offsetTop - offsetHeight / 2) / 8;
-    const yRotation = -(clientX - offsetLeft - offsetWidth / 2) / 8;
-
-    tiltRef.current.style.transform = `perspective(300px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
-  };
-
-  const handleMouseLeave = () => {
-    tiltRef.current.style.transform = "perspective(300px) rotateX(0deg) rotateY(0deg) scale(1)";
-  };
-
   return (
     <section id="Contact">
-      <div className="container-contact1">
-        <div
-          className="contact1-pic js-tilt"
-          ref={tiltRef}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-        >
-          <img
-            src="https://colorlib.com/etc/cf/ContactFrom_v1/images/img-01.png"
-            alt="IMG"
-          />
-        </div>
+      <h1 className="Contacttitle box">Contact Me</h1>
+      <div id="ContactModell">
 
+      </div>
+      <div className="contactform">
         <form
           className="contact1-form validate-form"
           data-dashlane-rid="ce256bf20c33bbc3"
           data-form-type="contact"
+          id="Contactform"
         >
           <span className="contact1-form-title">Get in touch</span>
           <div
