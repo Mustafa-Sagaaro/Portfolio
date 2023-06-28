@@ -17,6 +17,7 @@ export function runAnimation() {
   const socials = gsap.utils.toArray('#socials');
   const Wrapper = gsap.utils.toArray('.wrapper');
   const navigation = gsap.utils.toArray('.navigation');
+  const contactcanvas = gsap.utils.toArray('#contactcanvas');
 
   
   boxes.forEach((box, i) => {
@@ -47,6 +48,16 @@ export function runAnimation() {
       trigger: social,
       start: "top 80%",
       end: "top 30%",
+      animation: anim,
+      toggleActions: 'play reverse restart reverse',
+    });
+  });
+  contactcanvas.forEach((canvas, i) => {
+    const anim = gsap.fromTo(canvas, { autoAlpha: 0, x: -100 }, { duration: 1, autoAlpha: 1, x: 0 });
+    ScrollTrigger.create({
+      trigger: canvas,
+      start: "top 80%",
+      end: "top 0%",
       animation: anim,
       toggleActions: 'play reverse restart reverse',
     });

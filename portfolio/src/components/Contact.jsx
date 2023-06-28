@@ -1,14 +1,48 @@
-import React, { useRef } from "react";
-import "../styles/main.css";
+import React, { useEffect, useRef } from "react";
 import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "react-three-fiber";
+import { Canvas, useThree, useFrame } from "react-three-fiber";
+import { Camping } from "./Camping";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+
+  
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_758mh8o', 'template_81jk7ik', form.current, 'cHpchfuF_moTrAoBL')
+      .then((result) => {
+        toast.success("The Mail was successfully sent. Thank you!");
+      }, (error) => {
+          toast.error("There was an error. Your Mail couldn't be sent.");
+      });
+  };
+
   return (
     <section id="Contact">
-      <h1 className="Contacttitle box">Contact Me</h1>
+      <h1 className="Contacttitle" data-aos="fade-down">
+        Contact Me
+      </h1>
       <div id="ContactModell">
-
+        <Canvas
+          id="contactcanvas"
+          style={{ width: "100vw", height: "95vh", zIndex: "1" }}
+        >
+          <ambientLight />
+          <pointLight position={[100, 100, 100]} />
+          <CameraPosition />
+          <Camping />
+        </Canvas>
       </div>
       <div className="contactform">
         <form
@@ -16,8 +50,10 @@ const Contact = () => {
           data-dashlane-rid="ce256bf20c33bbc3"
           data-form-type="contact"
           id="Contactform"
+          ref={form}
+          onSubmit={sendEmail}
         >
-          <span className="contact1-form-title">Get in touch</span>
+          <span className="contact1-form-title gettouch">Get in touch</span>
           <div
             className="wrap-input1 validate-input alert-validate"
             data-validate="Name is required"
@@ -25,7 +61,7 @@ const Contact = () => {
             <input
               className="input1"
               type="text"
-              name="name"
+              name="user_name"
               placeholder="Name"
               data-dashlane-rid="d66dd58bd2bcf550"
               data-kwimpalastatus="alive"
@@ -36,53 +72,75 @@ const Contact = () => {
             <span
               id="1687851370095-0"
               data-dashlanecreated="true"
-              style={{ color: "initial", font: "initial" /* ... */ }}
+              style={{ color: "initial", font: "initial" }}
             ></span>
           </div>
           <div
-            class="wrap-input1 validate-input alert-validate"
+            className="wrap-input1 validate-input alert-validate"
+            data-validate="Email is required"
+          >
+            <input
+              className="input1"
+              type="email"
+              name="user_email"
+              placeholder="Email"
+              data-dashlane-rid="3e551c5c86a51d60"
+              data-form-type="other"
+            />
+            <span className="shadow-input1"></span>
+          </div>
+          <div
+            className="wrap-input1 validate-input alert-validate"
             data-validate="Subject is required"
           >
             <input
-              class="input1"
+              className="input1"
               type="text"
               name="subject"
               placeholder="Subject"
               data-dashlane-rid="3e551c5c86a51d60"
               data-form-type="other"
             />
-            <span class="shadow-input1"></span>
+            <span className="shadow-input1"></span>
           </div>
           <div
-            class="wrap-input1 validate-input alert-validate"
+            className="wrap-input1 validate-input alert-validate"
             data-validate="Message is required"
           >
             <textarea
-              class="input1"
+              className="input1"
               name="message"
               placeholder="Message"
               data-dashlane-rid="50a984f39bb34511"
               data-form-type="other"
             ></textarea>
-            <span class="shadow-input1"></span>
+            <span className="shadow-input1"></span>
           </div>
-          <div class="container-contact1-form-btn">
+          <div className="container-contact1-form-btn">
             <button
-              class="contact1-form-btn"
+              className="contact1-form-btn"
               data-dashlane-rid="ceccac826ff48031"
               data-dashlane-label="true"
               data-form-type="other"
+              style={{ zIndex: "1000" }}
             >
               <span>
                 Send Email
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
               </span>
             </button>
           </div>
         </form>
       </div>
+      <ToastContainer />
     </section>
   );
+};
+
+const CameraPosition = () => {
+  const { camera } = useThree();
+  camera.position.set(5, 3, 10);
+  return null;
 };
 
 export default Contact;

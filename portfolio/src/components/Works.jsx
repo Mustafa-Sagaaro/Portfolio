@@ -1,27 +1,34 @@
 import React, { useState } from "react";
 import "../styles/work.css";
+import { Link } from "react-router-dom";
 
 const Works = () => {
   const data = [
     {
       Auftrag: "My Work  ",
       description: "Klick next to see my previous Work",
-      img: "",
+      img: "src/assets/workswallpaper.png",
     },
     {
-      Auftrag: "Lorem Ipsum 1",
-      description: "Lorem ipsum dolor sit amet 1",
-      img: "https://plus.unsplash.com/premium_photo-1669316982093-b2ed20cc82ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1197&q=80",
+      Auftrag: "MeierMüller Auto Sales Web Design",
+      description:
+        "Developed a concept website for a hypothetical car sales company, exemplifying modern web design principles.",
+      img: "src/assets/MeierMüller.png",
+      link: "https://github.com/Mustafa-Sagaaro/ResponsiveWebseiteumsetzen",
     },
     {
-      Auftrag: "Lorem Ipsum 2",
-      description: "Lorem ipsum dolor sit amet 2",
-      img: "https://images.unsplash.com/photo-1682687220499-d9c06b872eee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      Auftrag: "Advanced Todo-List Web App",
+      description:
+        "Developed a robust To-Do List web application with comprehensive functionalities such as task creation, editing, and deletion during a course on integrating frontend with backend technologies.",
+      img: "src/assets/frontend1.png",
+      link: "https://github.com/Mustafa-Sagaaro/m294-lb-Mustafa_Sagaaro",
     },
     {
-      Auftrag: "Lorem Ipsum 3",
-      description: "Lorem ipsum dolor sit amet 3",
-      img: "https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      Auftrag: "Recipe Fetch API Web Application",
+      description:
+        "Worked on a project focusing on API utilization. Successfully fetched and displayed cooking recipes from an external API. The project served as a practical exercise in API handling.",
+      img: "src/assets/API.png",
+      link: "https://github.com/Mustafa-Sagaaro/CodeWeekWebAnwendung",
     },
   ];
 
@@ -57,9 +64,15 @@ const Works = () => {
                   </h5>
                 </span>
                 <span>
-                  <button className="discover-button" style={{ "--idx": "2" }}>
-                    Discover Now
-                  </button>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="discover-button"
+                    style={{ "--idx": "2" }}
+                  >
+                    Discover more
+                  </a>
                 </span>
               </div>
             ))}

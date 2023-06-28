@@ -475,8 +475,8 @@ input.input1 {
 .contact1-form {
   position: absolute;
   width: 30rem;
-  right: 20%;
-  top: 10rem;
+  right: 15%;
+  top: 15rem;
 }
 .contactform {
   display: flex;
@@ -679,9 +679,11 @@ textarea {
   top: 2rem;
   border-bottom: 3px solid #bcff9b;
   margin: 0 auto;
-
+  z-index: 10;
 }
-
+.gettouch {
+  z-index: 1000;
+}
 .Campfire {
   width: 100vw;
   height: 90vh;
