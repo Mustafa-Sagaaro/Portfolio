@@ -14,7 +14,7 @@
     "@emailjs/browser": "^3.11.0",
     "@react-spring/parallax": "^9.7.2",
     "@react-three/drei": "^9.77.0",
-    "@react-three/fiber": "^8.13.3",
+    "@react-three/fiber": "^8.13.4",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "email-validator": "^2.0.4",

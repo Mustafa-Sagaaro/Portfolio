@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Hologram } from "./Hologram";
 import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "react-three-fiber";
+import { Canvas, useFrame } from '@react-three/fiber'
 
 const About = () => {
   return (
@@ -36,19 +36,19 @@ const About = () => {
         <ul id="socials">
           <li>
             <a href="https://github.com/Mustafa-Sagaaro">
-              <i class="fa fa-github" aria-hidden="true"></i>
+              <i className="fa fa-github" aria-hidden="true"></i>
               <span> - Github</span>
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/mustafa-sagaaro-26166827a/">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <i className="fa fa-linkedin" aria-hidden="true"></i>
               <span> - Linkedin</span>
             </a>
           </li>
           <li>
             <a href="mailto:sagaaromustafa@gmail.com">
-              <i class="fa fa-google" aria-hidden="true"></i>
+              <i className="fa fa-google" aria-hidden="true"></i>
               <span> - Mail</span>
             </a>
           </li>

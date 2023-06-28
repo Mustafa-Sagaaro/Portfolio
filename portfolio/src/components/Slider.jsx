@@ -8,7 +8,7 @@ import gsap from 'gsap';
 
 const Slider = () => {
     return (
-        <div class="Slider"></div>
+        <div className="Slider"></div>
     )
 }
 

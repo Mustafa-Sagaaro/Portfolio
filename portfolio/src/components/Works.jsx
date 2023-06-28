@@ -105,7 +105,11 @@ const Works = () => {
               const formattedOrdinal = ordinal < 10 ? `0${ordinal}` : ordinal;
 
               return (
-                <h2 key={index} className={isActive ? "active" : ""}>
+                <h2
+                  key={index}
+                  className={isActive ? "active" : ""}
+                  style={{ "--idx": currentIndex }} // Hier die Änderung
+                >
                   {formattedOrdinal}
                 </h2>
               );

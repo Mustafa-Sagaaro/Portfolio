@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { OrbitControls } from "@react-three/drei";
-import { Canvas, useThree, useFrame } from "react-three-fiber";
+import { Canvas, useFrame, useThree} from '@react-three/fiber'
 import { Camping } from "./Camping";
 import AOS from "aos";
 import "aos/dist/aos.css";
