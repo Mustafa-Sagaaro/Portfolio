@@ -87,7 +87,11 @@ const Works = () => {
                   }`}
                   style={{ "--idx": index - 1 }}
                 >
-                  <img src={item.img} alt="" />
+                  <img
+                    src={item.img}
+                    className={index !== 0 ? "darken" : ""}
+                    alt=""
+                  />
                 </div>
               ))}
             </div>

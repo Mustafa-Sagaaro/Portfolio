@@ -24,7 +24,6 @@ const Hero = () => {
     <section id="Hero" className="section">
       <div id="hero-image">
       </div>
-      <div id="tsparticles"></div>
       <div id="introduction" >
         <h2>welcome, I'm</h2>
         <h1>Mustafa Sagaaro</h1>

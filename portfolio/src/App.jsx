@@ -10,6 +10,9 @@ import { runAnimation } from "./utils/motion.js";
 import "./styles/work.css";
 import CircleLoader from "react-spinners/CircleLoader";
 
+
+
+
 const App = () => {
   const [loading, setLoading] = useState(false);
 

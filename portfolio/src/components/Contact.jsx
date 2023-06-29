@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { Canvas, useFrame, useThree} from '@react-three/fiber'
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import * as THREE from "three";
+import { ParallaxBarrierEffect } from "three/examples/jsm/effects/ParallaxBarrierEffect";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"; // Importiere OrbitControls
 import { Camping } from "./Camping";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -7,12 +10,11 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const Contact = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-
-
   
   const form = useRef();
 
@@ -22,11 +24,14 @@ const Contact = () => {
     emailjs.sendForm('service_758mh8o', 'template_81jk7ik', form.current, 'cHpchfuF_moTrAoBL')
       .then((result) => {
         toast.success("The Mail was successfully sent. Thank you!");
+        form.current.reset();
       }, (error) => {
           toast.error("There was an error. Your Mail couldn't be sent.");
       });
   };
 
+
+  
   return (
     <section id="Contact">
       <h1 className="Contacttitle" data-aos="fade-down">
@@ -141,5 +146,7 @@ const CameraPosition = () => {
   camera.position.set(5, 3, 10);
   return null;
 };
+
+
 
 export default Contact;
