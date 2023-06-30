@@ -66,8 +66,8 @@ export function runAnimation() {
     const anim = gsap.fromTo(Wrapper, { autoAlpha: 0, x: -100 }, { duration: 1, autoAlpha: 1, x: 0 });
     ScrollTrigger.create({
       trigger: Wrapper,
-      start: "top 80%",
-      end: "top 30%",
+      start: "top 90%",
+      end: "top 20%",
       animation: anim,
       toggleActions: 'play reverse restart reverse',
     });

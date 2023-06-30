@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { ParallaxBarrierEffect } from "three/examples/jsm/effects/ParallaxBarrierEffect";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"; // Importiere OrbitControls
+import { OrbitControls } from "@react-three/drei";
 import { Camping } from "./Camping";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 const Contact = () => {
+  
   useEffect(() => {
     AOS.init();
   }, []);
@@ -29,7 +30,6 @@ const Contact = () => {
           toast.error("There was an error. Your Mail couldn't be sent.");
       });
   };
-
 
   
   return (
