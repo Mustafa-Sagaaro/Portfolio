@@ -12,7 +12,6 @@ import CircleLoader from "react-spinners/CircleLoader";
 
 
 
-
 const App = () => {
   const [loading, setLoading] = useState(false);
 

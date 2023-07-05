@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import * as THREE from "three";
-import { ParallaxBarrierEffect } from "three/examples/jsm/effects/ParallaxBarrierEffect";
-import { OrbitControls } from "@react-three/drei";
+import { Canvas, useThree } from "@react-three/fiber";
 import { Camping } from "./Camping";
 import AOS from "aos";
 import "aos/dist/aos.css";

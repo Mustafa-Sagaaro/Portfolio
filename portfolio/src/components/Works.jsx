@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles/work.css";
-import { Link } from "react-router-dom";
 
 const Works = () => {
   const data = [

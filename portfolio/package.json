@@ -36,6 +36,7 @@
     "react-transition-group": "^4.4.5",
     "react-use-scrollspy": "^3.1.1",
     "react-wavy-transitions": "^1.1.1",
+    "scrollpup": "^0.0.1",
     "three": "^0.153.0",
     "tsparticles": "^2.10.1"
   },

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Hologram } from "./Hologram";
 import { OrbitControls } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import AOS from "aos";
 
 
