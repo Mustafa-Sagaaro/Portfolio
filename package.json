@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "serve -s dist",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "serve": "^11.3.2",
     "@dogstudio/highway": "^2.2.1",
     "@emailjs/browser": "^3.11.0",
     "@react-spring/parallax": "^9.7.2",
