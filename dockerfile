@@ -2,7 +2,7 @@
 FROM node
 
 # Setze das Arbeitsverzeichnis im Container
-WORKDIR /portfolio/app
+WORKDIR /portfolio
 
 # Kopiere package.json und package-lock.json in das Arbeitsverzeichnis
 COPY package*.json ./
