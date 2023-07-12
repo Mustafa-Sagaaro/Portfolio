@@ -2,7 +2,7 @@
 FROM node
 
 # Setze das Arbeitsverzeichnis im Container
-WORKDIR /Portfolio/portfolio
+WORKDIR C:\Users\MSAAG\OneDrive - bbw.ch\Datenablage\Abschlussprojekt\Portfolio\portfolio
 
 # Kopiere package.json und package-lock.json in das Arbeitsverzeichnis
 COPY package*.json ./
