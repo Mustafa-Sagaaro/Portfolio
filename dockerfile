@@ -1,5 +1,5 @@
 # Verwende den offiziellen Node.js-Image als Basis
-FROM node:14
+FROM node:latest
 
 # Setze das Arbeitsverzeichnis im Container
 WORKDIR /portfolio
