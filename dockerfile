@@ -1,7 +1,7 @@
 
 FROM node:18.12.1
 
-WORKDIR /portfolio/src
+WORKDIR C:\Users\MSAAG\OneDrive - bbw.ch\Datenablage\Abschlussprojekt\Portfolio\portfolio
 
 COPY package*.json ./
 
