@@ -1,0 +1,89 @@
+commit c5b26521c48f6f07e3a157af7fe09027f63881dc
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Fri Jun 30 16:53:18 2023 +0200
+
+    abschluss
+
+commit a1159e466da1b4e36ba21974e52cfd9e6cdf93b2
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Thu Jun 29 13:21:34 2023 +0200
+
+    Verbesserungen vorgenommen, kleine Fehler behoben.
+
+commit 1a171db832b089faa3302b472a89fdad9d880462
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Wed Jun 28 23:25:16 2023 +0200
+
+    little changes in Contact and Work
+
+commit 1ed386001c7fd494d81f41c878e47a90d2db2d12
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Wed Jun 28 23:10:10 2023 +0200
+
+    Contact update and small changes
+
+commit 6a59b19a39c8de2aebe013a576c2baf2d8388fc7
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Wed Jun 28 16:57:55 2023 +0200
+
+    many updates
+
+commit 2b0eea105ca94f410fa910bd8fa6ec746d6b4819
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Tue Jun 27 11:47:02 2023 +0200
+
+    update about section
+
+commit 4ebd82438a237a6280d4e57202e99d86e9583dd2
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Thu Jun 22 15:58:27 2023 +0200
+
+    About section update
+
+commit 37153e3aa99c0b846e57615e17380d053c25da76
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Thu Jun 15 17:10:52 2023 +0200
+
+    verbesserungen + About me angefangen
+
+commit 3b184c6d6bba3f0926f154c7cc0c80bb5dc1e8e9
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Wed Jun 14 21:44:34 2023 +0200
+
+    Website update | nav and Hero section almost done
+
+commit 45fb25daa1c0fbd3fff192baa8e2415bc8d306a3
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Fri Jun 9 17:28:49 2023 +0200
+
+    Layout update
+
+commit 141b8af67e0e1130ad76cc5018128daf2a30808c
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Fri Jun 9 08:34:42 2023 +0200
+
+    Navbar fixed and added Animations
+
+commit d053449ab692127100ae5a4e8c43bdd1cb35012d
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Thu Jun 8 15:16:09 2023 +0200
+
+    Navbar bearbeitet und resposive gemacht
+
+commit 48075c241dd6cf89fe25bff877ba3883b857b4ea
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Thu Jun 8 10:46:58 2023 +0200
+
+    Made all Files ready
+
+commit cb0ddd4ce899ecf76d91a4ca3308d0f383907e14
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Thu Jun 8 08:52:42 2023 +0200
+
+    Alle Commands f├╝r React js und three js ausgef├╝hrt, somit projekt erstellt
+
+commit 4484e0bb9ac4951ed31c22ce2b9fbeac02fc0cad
+Author: Mustafa <113579321+Mustafa-Sagaaro@users.noreply.github.com>
+Date:   Thu Jun 8 08:41:42 2023 +0200
+
+    Initial commit
