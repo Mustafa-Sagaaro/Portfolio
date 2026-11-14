@@ -1,52 +1,99 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./components/Navbar.jsx";
-import About from "./components/About.jsx";
-import Contact from "./components/Contact.jsx";
-import Hero from "./components/Hero.jsx";
-import Works from "./components/Works.jsx";
-import Footer from "./components/Footer.jsx";
-import Slider from "./components/Slider.jsx";
-import { runAnimation } from "./utils/motion.js";
-import "./styles/work.css";
-import CircleLoader from "react-spinners/CircleLoader";
+import { useEffect, useRef, useState } from 'react'
+import { Nav, Hud, Loader } from './components/Chrome.jsx'
+import { Hero, Prolog, Anfang, Version1, Projects, Abschluss, Heute, Kontakt } from './components/Sections.jsx'
+import { createParticleScene } from './scene/ParticleScene.js'
+import {
+  createSmoothScroll,
+  heroIntro,
+  initScrollStory,
+  playLoader,
+  prefersReducedMotion,
+  ScrollTrigger,
+} from './lib/motion.js'
+import { profile } from './content.js'
 
+const wait = (ms) => new Promise((r) => setTimeout(r, ms))
 
-
-const App = () => {
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-  }, []);
+export default function App() {
+  const canvasRef = useRef(null)
+  const [copied, setCopied] = useState(false)
 
   useEffect(() => {
-    if (!loading) {
-      runAnimation();
+    const reduced = prefersReducedMotion()
+    const html = document.documentElement
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
+    if (!location.hash) window.scrollTo(0, 0)
+
+    const smooth = reduced ? null : createSmoothScroll()
+    smooth?.lenis.stop()
+
+    const scene = createParticleScene(canvasRef.current, { reducedMotion: reduced })
+    if (!scene) html.classList.add('no-webgl')
+
+    let cleanupStory = () => {}
+    let cancelled = false
+
+    const fonts = document.fonts?.ready ?? Promise.resolve()
+    const ready = Promise.all([
+      fonts,
+      Promise.race([scene?.firstFrame ?? Promise.resolve(), wait(2500)]),
+    ]).then(() => {
+      if (cancelled) return
+      cleanupStory = initScrollStory(reduced)
+      ScrollTrigger.refresh()
+    })
+
+    playLoader(ready, reduced).then(() => {
+      if (cancelled) return
+      html.classList.remove('is-loading')
+      smooth?.lenis.start()
+      scene?.start()
+      heroIntro(reduced)
+      if (location.hash) {
+        const target = document.querySelector(location.hash)
+        if (target) smooth ? smooth.lenis.scrollTo(target, { immediate: true }) : target.scrollIntoView()
+      }
+    })
+
+    return () => {
+      cancelled = true
+      cleanupStory()
+      scene?.dispose()
+      smooth?.destroy()
     }
-  }, [loading]);
+  }, [])
+
+  const copyMail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.email)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2200)
+    } catch {
+      window.location.href = `mailto:${profile.email}`
+    }
+  }
 
   return (
-    <div className="App">
-      {loading ? (
-        <div className="loader-container">
-          <CircleLoader size={200} color={"#36d7b7"} loading={loading} />
-          <p>Please wait for the Website to load...</p>
-        </div>
-      ) : (
-        <React.Fragment>
-          <Navbar />
-          <Hero />
-          <Slider />
-          <About />
-          <Works />
-          <Contact />
-        </React.Fragment>
-      )}
-    </div>
-  );
-};
-
-export default App;
+    <>
+      <Loader />
+      <canvas ref={canvasRef} className="webgl" aria-hidden="true" />
+      <div className="vignette" aria-hidden="true" />
+      <div className="grain" aria-hidden="true" />
+      <a className="skip" href="#story">
+        Zum Inhalt springen
+      </a>
+      <Nav />
+      <Hud />
+      <main>
+        <Hero />
+        <Prolog />
+        <Anfang />
+        <Version1 />
+        <Projects />
+        <Abschluss />
+        <Heute />
+        <Kontakt onCopy={copyMail} copied={copied} />
+      </main>
+    </>
+  )
+}

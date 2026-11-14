@@ -1,15 +1,16 @@
-FROM node:18.12.1
-
+# Build
+FROM node:22-alpine AS build
 WORKDIR /app
-
-COPY package.json ./
-
-RUN npm install
-
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY . .
-
 RUN npm run build
 
+# Serve
+FROM node:22-alpine
+WORKDIR /app
+RUN npm install -g serve@14
+COPY --from=build /app/dist ./dist
+ENV PORT=5000
 EXPOSE 5000
-
-CMD ["npm", "run", "start"]
+CMD ["sh", "-c", "serve -s dist -l tcp://0.0.0.0:${PORT}"]
