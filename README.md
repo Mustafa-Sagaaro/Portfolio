@@ -38,5 +38,6 @@ Ein neues Kapitel: Section mit `data-scene="<key>"` in `Sections.jsx` anlegen un
 
 ## Deploy
 
-- **Vercel**: verbunden mit diesem Repo, baut automatisch (`vercel.json`). Branches bekommen eine Preview-URL, `main` geht auf Produktion.
+- **GitHub Pages**: jeder Push auf `main` baut und deployt über `.github/workflows/deploy.yml` nach https://mustafa-sagaaro.github.io/Portfolio/
+- **Vercel**: falls mit dem Repo verbunden, baut es automatisch (`vercel.json`).
 - **Docker**: `docker build -t portfolio . && docker run -p 5000:5000 portfolio`
